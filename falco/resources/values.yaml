@@ -24,3 +24,6 @@ falco:
     custom-rules.yaml: |-
         - list: user_known_chmod_applications
           items: [hyperkube, kubelet, k3s-agent, k3s-server]
+        - macro: user_known_contact_k8s_api_server_activities
+          condition: >
+            (k8s.ns.name = "k3os-system" or k8s.ns.name = "argocd")
