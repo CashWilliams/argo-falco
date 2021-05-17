@@ -20,3 +20,7 @@ falco:
       - /etc/falco/falco_rules.local.yaml
       - /etc/falco/k8s_audit_rules.yaml
       - /etc/falco/rules.d/custom-rules.yaml
+  customRules:
+    custom-rules.yaml: |-
+        - list: user_known_chmod_applications
+          items: [hyperkube, kubelet, k3s-agent, k3s-server]
