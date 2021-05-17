@@ -9,6 +9,8 @@ falco:
               customHeaders: Source:falco
   fakeEventGenerator:
     enabled: false
+  docker:
+    enabled: false
   containerd:
       enabled: true
       socket: /run/k3s/containerd/containerd.sock

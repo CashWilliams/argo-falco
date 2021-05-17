@@ -15,8 +15,9 @@ spec:
           - path: body.rule
             type: string
             value:
-              - "Terminal shell in container"
-              - "COOKIE tampering detector"
+              - "Detect crypto miners using the Stratum protocol"
+              - "Write below binary dir"
+              - "Write below monitored dir"
   triggers:
     - template:
         name: delete-pod-trigger
