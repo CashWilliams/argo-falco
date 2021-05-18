@@ -28,3 +28,5 @@ falco:
           condition: >
             (container.image.repository in (docker.io/argoproj/argoexec)
              or k8s.ns.name in (k3os-system, argocd, argo, argo-events))
+        - macro: user_known_container_drift_activities
+          condition: (never_true)
